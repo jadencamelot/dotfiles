@@ -1,0 +1,37 @@
+#####################
+#      PROFILE      #
+#####################
+
+# DPG Terminal Colours
+# [~/cur/dir]
+# [HH:MM:SS] Jaden $ 
+export PS1="\[\033[38;5;81m\][\w]\[$(tput sgr0)\]\[\033[38;5;15m\]\n\[$(tput sgr0)\]\[\033[38;5;144m\][\t]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;226m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;144m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+
+# Make Sublime Text the default editor
+export EDITOR='subl -w'
+
+# Bash Completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+. $(brew --prefix)/etc/bash_completion
+fi
+
+# Autojump
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+# Force pip to require a virtual environment
+export PIP_REQUIRE_VIRTUALENV=true
+
+#####################
+#     SHORTCUTS     #
+#####################
+
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+alias la='ls -la'
+alias l1='ls -1'
+alias sourcev='source venv/bin/activate'
+alias up='cd ..'
+
+recent() {
+    history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n20
+}
