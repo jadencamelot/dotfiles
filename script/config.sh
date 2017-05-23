@@ -1,11 +1,12 @@
-##################################
-#   macOS Setup Script - Config  #
-#              v0.1              #
-#           Jaden Burt           #
-#                                #
-#     Created:  20/05/2017       #
-#     Modified: 21/05/2017       #
-##################################
+#!/usr/bin/env bash
+
+####################################
+#  macOS Setup Script - OS Config  #
+#               v0.1               #
+#            Jaden Burt            #
+#                                  #
+#      Created:  20/05/2017        #
+####################################
 
 ##### OSX CONFIG #####
 
@@ -17,36 +18,17 @@ defaults write -g AppleShowScrollBars -string "Always"
 # Auto-hide menu bar
 defaults write -g _HIHideMenuBar -bool YES
 
-# Always expand save/print panels by default
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+### Dock
 
-# Save to disk (not to iCloud) by default
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+# Speed up animations
+defaults write com.apple.dock autohide-time-modifier -int 1
+defaults write com.apple.dock autohide-delay -int 0
 
-# Automatically quit printer app once the print jobs complete
-defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+# Translucent icons for hidden apps
+defaults write com.apple.Dock showhidden -bool YES
 
-### Keyboard
-
-# Disable autocorrect/"smart typing" features
-defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-
-### Trackpad
-
-# Enable tap to click (current user AND login screen)
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-
-# Disable "natural" (Lion-style) scrolling
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+# Auto-hide dock
+# TODO
 
 ### Sleep/Screen Saver
 
@@ -66,19 +48,53 @@ defaults write com.apple.screencapture type -string "png"
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
 
-### Dock
+### Keyboard
 
-# Speed up animations
-defaults write com.apple.dock autohide-time-modifier -int 1
-defaults write com.apple.dock autohide-delay -int 0
+# Fast key repeat/delay
+# TODO
 
-# Translucent icons for hidden apps
-defaults write com.apple.Dock showhidden -bool YES
+# Disable requiring Fn key for F1-12 keys
+# TODO
 
-# Auto-hide dock
+# Disable autocorrect/"smart typing" features
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+### Keyboard shortcuts - TODO
 
-killall Dock
+# Move left/right a space
+# ⌘→
+# ⌘←
+
+# Notes.app
+
+# Dashed List
+# Cmd + Option + Shift + D
+# Numbered List
+# Cmd + Option + Shift + D
+# Bulleted List
+# Cmd + Option + Shift + D
+
+### Trackpad
+
+# Enable tap to click (current user AND login screen)
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Disable "natural" (Lion-style) scrolling
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+#TODO
+
+### Sound
+
+# Play feedback when volume is changed
+
+### iCloud
 
 ### Finder
 
@@ -129,6 +145,7 @@ defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 defaults write NSGlobalDomain com.apple.springing.delay -float 0
 
 # Automatically open a new Finder window when a volume is mounted
+# TODO - why does this not work
 #defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
 #defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
 #defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
@@ -141,3 +158,26 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 	Privileges -bool true
 
 killall Finder
+
+### Save dialogs
+
+# Always expand save/print panels by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
+# Save to disk (not to iCloud) by default
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+### Printing
+
+# Automatically quit printer app once the print jobs complete
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
+##### CLEANUP #####
+
+# Restart affected apps
+killall Dock
+killall Finder
+killall SystemUIServer

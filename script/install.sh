@@ -1,10 +1,11 @@
+#!/usr/bin/env bash
+
 ##################################
 #    macOS Setup Script - Apps   #
 #              v0.1              #
 #           Jaden Burt           #
 #                                #
 #     Created:  20/05/2017       #
-#     Modified: 21/05/2017       #
 ##################################
 
 ##### INSTALL APPS #####
@@ -59,7 +60,7 @@ brew install mas
 
 mas install 682658836 # Garageband
 #mas install 931202332 # MiniPlayer
-# Bandwidth+
+mas install 490461369 # Bandwidth+
 
 ### Manual Download
 
@@ -67,36 +68,3 @@ mas install 682658836 # Garageband
 # Parallels Desktop / VMWare Fusion
 # Blackstar INSIDER
 # ScreenShade
-
-##### CONFIG #####
-
-
-
-
-
-##### APP CONFIG #####
-
-### Sublime Text 3
-
-# TODO: sync preferences via symlink to Dropbox/iCloud
-
-### Safari
-
-# UBlock Origin
-
-# Download manually from here: (can't script as it's prerelease-only)
-# https://github.com/el1t/uBlock-Safari/releases
-
-### Jitouch
-
-# Copy preferences file
-
-# Force Jitouch to stay open (prevent periodical quit due to trial version)
-#cp ~/somewhere ~/Library/LaunchAgents/com.jitouch.Jitouch.plist
-#launchctl load ~/Library/LaunchAgents/com.jitouch.Jitouch.plist
-
-##### DONE #####
-
-echo "All done! Please restart for some system changes to take effect."
-
-
