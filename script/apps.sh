@@ -10,6 +10,14 @@
 
 ##### APP CONFIG #####
 
+### Terminal
+
+cp files/inputrc ~/.inputrc
+cp files/bash_profile ~/.bash_profile
+
+source ~/.inputrc
+source ~/.bash_profile
+
 ### Sublime Text 3
 
 # TODO: sync preferences via symlink to Dropbox/iCloud
@@ -24,7 +32,9 @@
 ### Jitouch
 
 # Copy preferences file
+cp files/com.jitouch.Jitouch.plist ~/Library/Preferences
 
 # Force Jitouch to stay open (prevent periodical quit due to trial version)
-#cp ~/somewhere ~/Library/LaunchAgents/com.jitouch.Jitouch.plist
-#launchctl load ~/Library/LaunchAgents/com.jitouch.Jitouch.plist
+mkdir -p ~/Library/LaunchAgents
+cp files/com.jitouch.Jitouch.plist ~/Library/LaunchAgents/
+launchctl load ~/Library/LaunchAgents/com.jitouch.Jitouch.plist
