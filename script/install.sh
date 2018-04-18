@@ -12,7 +12,7 @@
 
 # Homebrew
 #xcode-select --install
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 ### Brew packages
 brew install archey
@@ -40,11 +40,11 @@ brew cask install google-chrome
 brew cask install jitouch
 #brew cask install keka
 #brew cask install little-snitch
-brew cask install nvalt
+#brew cask install nvalt
 brew cask install qlstephen
 brew cask install quicklook-csv
 brew cask install quicklook-json
-brew cask install rocket-chat
+#brew cask install rocket-chat
 brew cask install spectacle
 brew cask install spotify
 #brew cask install steam
@@ -58,9 +58,9 @@ brew cask install vlc
 # Mac app store CLI - required for rest of script
 brew install mas
 
-mas install 682658836 # Garageband
+#mas install 682658836 # Garageband
 #mas install 931202332 # MiniPlayer
-mas install 490461369 # Bandwidth+
+#mas install 490461369 # Bandwidth+
 
 ### Manual Download
 

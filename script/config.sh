@@ -16,7 +16,7 @@
 defaults write -g AppleShowScrollBars -string "Always"
 
 # Auto-hide menu bar
-defaults write -g _HIHideMenuBar -bool YES
+#defaults write -g _HIHideMenuBar -bool YES
 
 ### Dock
 
