@@ -40,9 +40,19 @@ brew cask install flux
 brew cask install font-hack
 brew cask install google-chrome
 brew cask install jitouch
+<<<<<<< HEAD
 brew cask install qlstephen
 brew cask install quicklook-csv
 brew cask install quicklook-json
+=======
+#brew cask install keka
+#brew cask install little-snitch
+#brew cask install nvalt
+brew cask install qlstephen
+brew cask install quicklook-csv
+brew cask install quicklook-json
+#brew cask install rocket-chat
+>>>>>>> 295c7a35bb51458914de3d654b8c351441ca9431
 brew cask install spectacle
 brew cask install sublime-text
 brew cask install suspicious-package
@@ -58,6 +68,7 @@ if [[ $INSTALL_MODE = "personal" ]]; then
 	brew cask install vlc
 fi
 
+<<<<<<< HEAD
 ## Work
 if [[ $INSTALL_MODE = "work" ]]; then
 	#brew cask install burp-suite
@@ -68,3 +79,18 @@ if [[ $INSTALL_MODE = "work" ]]; then
 	brew cask install tunnelblick
 	brew cask install vmware-fusion
 fi
+=======
+# Mac app store CLI - required for rest of script
+brew install mas
+
+#mas install 682658836 # Garageband
+#mas install 931202332 # MiniPlayer
+#mas install 490461369 # Bandwidth+
+
+### Manual Download
+
+# Microsoft Office
+# Parallels Desktop / VMWare Fusion
+# Blackstar INSIDER
+# ScreenShade
+>>>>>>> 295c7a35bb51458914de3d654b8c351441ca9431
