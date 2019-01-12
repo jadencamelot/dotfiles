@@ -12,22 +12,32 @@
 
 ### Terminal
 
+# TODO: import theme profile
+# files/Theme.terminal
+
+### Bash
+
 cp files/inputrc ~/.inputrc
 cp files/bash_profile ~/.bash_profile
 
 source ~/.inputrc
 source ~/.bash_profile
 
+### Fish
+
+# TODO
+
 ### Sublime Text 3
 
 # TODO: sync preferences via symlink to Dropbox/iCloud
 
-### Safari
+### Chrome
 
-# UBlock Origin
-
-# Download manually from here: (can't script as it's prerelease-only)
-# https://github.com/el1t/uBlock-Safari/releases
+# Set up multiple profiles
+# Install extensions (mainly UBlock Origin)
+# Configure chrome settings
+#   - block 3rd party cookies
+#   - disable search suggestions etc
 
 ### Jitouch
 
@@ -35,6 +45,7 @@ source ~/.bash_profile
 cp files/com.jitouch.Jitouch.plist ~/Library/Preferences
 
 # Force Jitouch to stay open (prevent periodical quit due to trial version)
-mkdir -p ~/Library/LaunchAgents
-cp files/com.jitouch.Jitouch.plist ~/Library/LaunchAgents/
-launchctl load ~/Library/LaunchAgents/com.jitouch.Jitouch.plist
+# Should no longer be necessary, now that licenses have become free
+#mkdir -p ~/Library/LaunchAgents
+#cp files/com.jitouch.Jitouch.plist ~/Library/LaunchAgents/
+#launchctl load ~/Library/LaunchAgents/com.jitouch.Jitouch.plist

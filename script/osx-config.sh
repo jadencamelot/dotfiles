@@ -13,10 +13,10 @@
 ### General
 
 # Always show scroll bars
-defaults write -g AppleShowScrollBars -string "Always"
+defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
 # Auto-hide menu bar
-defaults write -g _HIHideMenuBar -bool YES
+#defaults write NSGlobalDomain _HIHideMenuBar -bool YES
 
 ### Dock
 
@@ -39,7 +39,7 @@ defaults write com.apple.screensaver askForPasswordDelay -int 10
 ### Screenshots
 
 # Save screenshots to Screenshots folder
-mkdir -p ~/Pictures/Screenshots
+mkdir -p "${HOME}/Pictures/Screenshots"
 defaults write com.apple.screencapture location -string "${HOME}/Pictures/Screenshots"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
@@ -82,8 +82,8 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Enable tap to click (current user AND login screen)
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Disable "natural" (Lion-style) scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
