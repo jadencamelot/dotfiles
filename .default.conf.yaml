@@ -5,6 +5,10 @@
 
 - clean: ['~', '~/.config']
 
+- link:
+  - ~/.gitconfig: git/.gitconfig
+  - ~/.config/git: git
+
 - create:
   - ~/code/personal
   - ~/code/public

@@ -1,0 +1,18 @@
+
+# Global config
+[core]
+    excludesfile = ~/.config/git/.gitignore_global
+
+# Platform-specific config
+[includeIf "gitdir:/Users"]
+    path = ~/.config/git/.gitconfig-macos
+[includeIf "gitdir:C:"]
+    path = ~/.config/git/.gitconfig-windows
+[includeIf "gitdir:/home"]
+    path = ~/.config/git/.gitconfig-linux
+
+# Separate personal vs work
+[includeIf "gitdir:~/code/personal/"]
+    path = ~/.config/git/.gitconfig-personal
+[includeIf "gitdir:~/code/work/"]
+    path = ~/.config/git/.gitconfig-work
