@@ -6,11 +6,8 @@
 - clean: ['~', '~/.config']
 
 - link:
-    ~/.gitconfig:
-      path: git/.gitconfig
-      force: true
-    ~/.config/git:
-      path: git
+    ~/.gitconfig: git/.gitconfig
+    ~/.config/git: git
 
 - create:
   - ~/code/personal

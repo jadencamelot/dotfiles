@@ -1,3 +1,6 @@
 [submodule ".dotbot"]
 	path = .dotbot
 	url = https://github.com/anishathalye/dotbot
+[submodule "mac/ubersicht/simple-bar"]
+	path = mac/ubersicht/simple-bar
+	url = https://github.com/Jean-Tinland/simple-bar

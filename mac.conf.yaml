@@ -1,0 +1,11 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~', '~/Library/Application\ Support/Übersicht/widgets/']
+
+- link:
+    ~/.config/yabai/yabairc: mac/yabairc
+    ~/.config/yabai/skhdrc: mac/skhdrc
+    # '~/Library/Application\ Support/Übersicht/widgets/simple-bar': mac/ubersicht/simple-bar
