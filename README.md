@@ -2,7 +2,7 @@
 
 Personal dotfiles repo. Currently uses [Dotbot](https://github.com/anishathalye/dotbot) for installation.
 
-Dotbot configuration is located in `.default.conf.yaml`.
+Dotbot configuration is located in `default.conf.yaml`.
 
 ## Usage
 
