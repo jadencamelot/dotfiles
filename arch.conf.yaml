@@ -1,0 +1,16 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- sudo:
+  - pacman:
+    - sudo
+    - vi
+    - vim
+    - nano
+    - fish
+    - fisher
+    - networkmanager
+    - mandoc
+    - openssh
