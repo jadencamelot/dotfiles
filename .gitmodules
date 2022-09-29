@@ -4,3 +4,6 @@
 [submodule "mac/ubersicht/simple-bar"]
 	path = mac/ubersicht/simple-bar
 	url = https://github.com/Jean-Tinland/simple-bar
+[submodule "dotbot-pacaur"]
+	path = dotbot-pacaur
+	url = https://github.com/ajlende/dotbot-pacaur
