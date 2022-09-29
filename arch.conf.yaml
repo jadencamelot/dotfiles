@@ -1,0 +1,12 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/scripts: vfio-gaming/scripts
+    ~/startup: vfio-gaming/startup
+    ~/vm_xml: vfio-gaming/vm_xml
+    # '~/Library/Application\ Support/Übersicht/widgets/simple-bar': mac/ubersicht/simple-bar
