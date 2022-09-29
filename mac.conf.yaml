@@ -7,5 +7,6 @@
 
 - link:
     ~/.config/yabai/yabairc: mac/yabairc
-    ~/.config/yabai/skhdrc: mac/skhdrc
+    ~/.config/skhd/skhdrc: mac/skhdrc
+    ~/.config/alacritty: mac/alacritty
     # '~/Library/Application\ Support/Übersicht/widgets/simple-bar': mac/ubersicht/simple-bar
