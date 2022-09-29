@@ -4,6 +4,13 @@
       relink: true
 
 - sudo:
+  - shell:
+    - 
+      command: pacman -Syu
+      stdin: true
+      stdout: true
+      stderr: true
+      description: Run system upgrade before installing packages
   - pacman:
     - sudo
     - vi
