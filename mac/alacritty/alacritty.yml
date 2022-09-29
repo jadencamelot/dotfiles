@@ -10,8 +10,7 @@ window:
 font:
   use_thin_strokes: true
   normal:
-    family: JetBrains Mono
-    style: Regular
+    family: "MesloLGS Nerd Font"
   size: 15.5
   offset:
     x: 0
