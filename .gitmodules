@@ -4,3 +4,6 @@
 [submodule "mac/ubersicht/simple-bar"]
 	path = mac/ubersicht/simple-bar
 	url = https://github.com/Jean-Tinland/simple-bar
+[submodule "vfio-gaming"]
+	path = vfio-gaming
+	url = git@github.com:jadencamelot/vfio-gaming.git
