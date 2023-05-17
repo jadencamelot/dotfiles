@@ -5,12 +5,12 @@
 
 - sudo:
   - pacman:
+    - fish
+    - fisher
+    - mandoc
+    - nano
+    - networkmanager
+    - openssh
     - sudo
     - vi
     - vim
-    - nano
-    - fish
-    - fisher
-    - networkmanager
-    - mandoc
-    - openssh
