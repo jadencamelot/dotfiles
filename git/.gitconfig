@@ -16,3 +16,5 @@
     path = ~/.config/git/.gitconfig-personal
 [includeIf "gitdir:~/code/work/"]
     path = ~/.config/git/.gitconfig-work
+[includeIf "gitdir:~/code/public/"]
+    path = ~/.config/git/.gitconfig-anonymous
