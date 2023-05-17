@@ -41,7 +41,8 @@ yabai -m config bottom_padding               15
 yabai -m config left_padding                 15
 yabai -m config right_padding                15
 yabai -m config window_gap                   15
-yabai -m config external_bar                 all:28:0
+# yabai -m config external_bar                 all:28:0
+yabai -m config external_bar                 all:0:0
 
 # Spaces Settings
 yabai -m space 1 --label web
@@ -65,5 +66,6 @@ yabai -m config mouse_drop_action            swap
 
 # App Exclusions
 yabai -m rule --add app="^System Preferences$" layer=above manage=off
+yabai -m rule --add app="^1Password$" layer=above manage=off
 
 echo "yabai configuration loaded.."
