@@ -14,3 +14,8 @@
   - ~/code/personal
   - ~/code/public
   - ~/code/work
+
+# - shell:
+#   - fisher install ilancosman/tide@v5
+#   - tide_theme_reset
+#   - tide_theme_customise
