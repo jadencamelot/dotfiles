@@ -41,7 +41,6 @@ yabai -m config bottom_padding               15
 yabai -m config left_padding                 15
 yabai -m config right_padding                15
 yabai -m config window_gap                   15
-# yabai -m config external_bar                 all:28:0
 yabai -m config external_bar                 all:0:0
 
 # Spaces Settings
@@ -65,7 +64,17 @@ yabai -m config mouse_action2                resize
 yabai -m config mouse_drop_action            swap
 
 # App Exclusions
-yabai -m rule --add app="^System Preferences$" layer=above manage=off
-yabai -m rule --add app="^1Password$" layer=above manage=off
+yabai -m rule --add app="^1Password$"           layer=above manage=off
+yabai -m rule --add app="^Activity Monitor$"    layer=above manage=off
+yabai -m rule --add app="^App Store$"           layer=above manage=off
+yabai -m rule --add app="^Archive Utility$"     layer=above manage=off
+yabai -m rule --add app="^Calculator$"          layer=above manage=off
+yabai -m rule --add app="^Dictionary$"          layer=above manage=off
+yabai -m rule --add app="^Photo Booth$"         layer=above manage=off
+yabai -m rule --add app="^Software Update$"     layer=above manage=off
+yabai -m rule --add app="^System Preferences$"  layer=above manage=off
+yabai -m rule --add app="^VLC$"                 layer=above manage=off
+yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac"  manage=off
+yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)"     manage=off
 
 echo "yabai configuration loaded.."
