@@ -198,10 +198,15 @@ alt + shift + cmd - l : yabai -m window --warp east
 alt + shift + cmd - u : yabai -m space --rotate 90
 alt + shift + cmd - o : yabai -m space --rotate 270
 
+# MOVE SPACES (just replay macOS keybinds, defined in system preferences)
+# TODO: doesn't actually work. Changed macOS keybinds instead
+#ctrl + shift - j : skhd --key "cmd + left"
+#ctrl + shift - l : skhd --key "cmd + right"
+
 # KICK TO SPACE (left/right only)
-# ctrl + shift
-ctrl + shift - j : yabai -m window --space prev
-ctrl + shift - l : yabai -m window --space next
+# add ⌘
+ctrl + shift + cmd - j : yabai -m window --space prev
+ctrl + shift + cmd - l : yabai -m window --space next
 
 
 # ~~~ T-GROUP COMMANDS ~~~
