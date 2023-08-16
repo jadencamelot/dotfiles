@@ -144,5 +144,92 @@
 # toggle sticky(+float), topmost, picture-in-picture
 # alt - p : yabai -m window --toggle sticky --toggle topmost --toggle pip
 
+## BEGIN JB CONFIG ##
+
+# Pseudo-arrow-key groupings
+#
+#   Left   Right
+#    U       P
+#  H J K   L ; '
+#
+# Shoulder keys for Left/Right rotation etc
+#
+#  Left    Right
+#  Y u I   O p [
+#  . . .   . . .
+#
+# Some hexcodes must be used for P-group
+# ; = 0x29
+# ' = 0x27
+# [ = 0x21
+
+# ~~~ P-GROUP COMMANDS ~~~
+
+# FOCUS
+# option + shift
+alt + shift - p    : yabai -m window --focus north
+alt + shift - l    : yabai -m window --focus west
+alt + shift - 0x29 : yabai -m window --focus south
+alt + shift - 0x27 : yabai -m window --focus east
+# shoulders = ROTATE FOCUS CLOCK/COUNTER
+alt + shift - o    : /Users/jaden/.config/yabai/scripts/cycle_counterclockwise.sh
+alt + shift - 0x21 : /Users/jaden/.config/yabai/scripts/cycle_clockwise.sh
+
+# SWAP WINDOWS
+# add ctrl
+alt + shift + ctrl - p    : yabai -m window --swap north
+alt + shift + ctrl - l    : yabai -m window --swap west
+alt + shift + ctrl - 0x29 : yabai -m window --swap south
+alt + shift + ctrl - 0x27 : yabai -m window --swap east
+# shoulders = ROTATE BSP
+alt + shift + ctrl - o    : yabai -m space --rotate 90
+alt + shift + ctrl - 0x21 : yabai -m space --rotate 270
+
+# WARP WINDOW
+# add ⌘
+alt + shift + cmd - p    : yabai -m window --warp north
+alt + shift + cmd - l    : yabai -m window --warp west
+alt + shift + cmd - 0x29 : yabai -m window --warp south
+alt + shift + cmd - 0x27 : yabai -m window --warp east
+# shoulders = KICK TO SPACE
+alt + shift + cmd - o    : yabai -m window --space prev
+alt + shift + cmd - 0x21 : yabai -m window --space next
+
+
+# ~~~ U-GROUP COMMANDS ~~~
+
+# ENLARGE WINDOW
+# option + shift
+alt + shift - u : yabai -m window --resize top:0:-20
+alt + shift - h : yabai -m window --resize left:-20:0
+alt + shift - j : yabai -m window --resize bottom:0:20
+alt + shift - k : yabai -m window --resize right:20:0
+#alt + shift - o    : yabai -m window --resize left:-20:0
+#alt + shift - 0x21 : yabai -m window --resize top:0:20
+
+# SHRINK WINDOW
+# option + shift
+alt + shift + ctrl - u : yabai -m window --resize top:0:20
+alt + shift + ctrl - h : yabai -m window --resize left:20:0
+alt + shift + ctrl - j : yabai -m window --resize bottom:0:-20
+alt + shift + ctrl - k : yabai -m window --resize right:-20:0
+
+# ~~~ MISC COMMANDS ~~~
+
 # restart yabai
-ctrl + alt - r : brew services restart yabai
+ctrl + shift - r : brew services restart yabai
+
+# force rebalance
+ctrl + shift - 0 : yabai -m space --balance
+
+# toggle floating
+ctrl + shift - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# toggle zoom
+ctrl + shift - f : yabai -m window --toggle zoom-parent
+ctrl + shift - g : yabai -m window --toggle zoom-fullscreen
+
+# switch vertical/horizontal split
+ctrl + shift - v :yabai -m window --toggle split
+
+
