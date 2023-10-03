@@ -1,7 +1,7 @@
 - defaults:
     link:
-      create: true
-      relink: true
+        create: true
+        relink: true
 
 - clean: ['~', '~/Library/Application\ Support/Übersicht/widgets/']
 
@@ -12,3 +12,16 @@
     ~/.config/skhd/skhdrc: mac/skhdrc
     ~/.config/alacritty: mac/alacritty
     # '~/Library/Application\ Support/Übersicht/widgets/simple-bar': mac/ubersicht/simple-bar
+
+- install-brew: true
+
+- shell:
+    # Using the shell command directly rather than "brewfile" directive from the plugin because
+    #   1) plugin forces --verbose flag, which prints way too much with a large brewfile
+    #   2) stdout/stderr handling is broken in the plugin (behaviour inverted)
+    - command: brew bundle install --file="~/.config/brew/Brewfile"
+      stdout: true
+      stderr: true
+    - command: brew autoupdate start --upgrade
+    - command: yabai --stop-service && yabai --start-service
+    - command: skhd --stop-service && skhd --start-service
