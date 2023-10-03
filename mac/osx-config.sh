@@ -13,10 +13,19 @@
 ### General
 
 # Always show scroll bars
-defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+#defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
 # Auto-hide menu bar
 #defaults write NSGlobalDomain _HIHideMenuBar -bool YES
+
+### Menu Bar
+
+# Show these icons in the menu bar
+defaults write com.apple.systemuiserver menuExtras -array \
+	"/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
+	"/System/Library/CoreServices/Menu Extras/AirPort.menu" \
+	"/System/Library/CoreServices/Menu Extras/Battery.menu" \
+	"/System/Library/CoreServices/Menu Extras/Clock.menu"
 
 ### Dock
 
@@ -51,7 +60,8 @@ defaults write com.apple.screencapture disable-shadow -bool true
 ### Keyboard
 
 # Fast key repeat/delay
-# TODO
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 6
 
 # Disable requiring Fn key for F1-12 keys
 # TODO
@@ -142,7 +152,7 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # Enable spring loading for directories and remove the delay
 defaults write NSGlobalDomain com.apple.springing.enabled -bool true
-defaults write NSGlobalDomain com.apple.springing.delay -float 0
+defaults write NSGlobalDomain com.apple.springing.delay -float 0.5
 
 # Automatically open a new Finder window when a volume is mounted
 # TODO - why does this not work
