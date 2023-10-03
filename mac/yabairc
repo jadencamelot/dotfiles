@@ -76,5 +76,6 @@ yabai -m rule --add app="^System Preferences$"  layer=above manage=off
 yabai -m rule --add app="^VLC$"                 layer=above manage=off
 yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac"  manage=off
 yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)"     manage=off
+yabai -m rule --add title="^SAML Login$"          layer=above manage=off
 
 echo "yabai configuration loaded.."
