@@ -6,6 +6,7 @@
 - clean: ['~', '~/Library/Application\ Support/Übersicht/widgets/']
 
 - link:
+    ~/.config/brew/Brewfile: mac/Brewfile
     ~/.config/yabai/yabairc: mac/yabairc
     ~/.config/yabai/scripts: mac/yabai_scripts
     ~/.config/skhd/skhdrc: mac/skhdrc
