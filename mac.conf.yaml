@@ -2,6 +2,9 @@
     link:
         create: true
         relink: true
+    shell:
+        stdout: true
+        stderr: true
 
 - clean: ['~', '~/Library/Application\ Support/Übersicht/widgets/']
 
@@ -20,8 +23,9 @@
     #   1) plugin forces --verbose flag, which prints way too much with a large brewfile
     #   2) stdout/stderr handling is broken in the plugin (behaviour inverted)
     - command: brew bundle install --file="~/.config/brew/Brewfile"
-      stdout: true
-      stderr: true
+      stdout: false
     - command: brew autoupdate start --upgrade
+    - command: mac/set_shell_fish.sh
+    - command: mac/osx-config.sh
     - command: yabai --stop-service && yabai --start-service
     - command: skhd --stop-service && skhd --start-service
