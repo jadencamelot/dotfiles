@@ -229,7 +229,7 @@ alt + shift + ctrl - h : yabai -m window --resize right:-20:0
 # ~~~ MISC COMMANDS ~~~
 
 # restart yabai
-ctrl + shift - r : brew services restart yabai
+ctrl + shift - r : yabai --restart-service
 
 # force rebalance
 ctrl + shift - 0 : yabai -m space --balance
