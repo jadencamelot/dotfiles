@@ -8,6 +8,4 @@ fish/**/*tide*
 fish/fish_prompt.fish
 
 # Explicitly include personal tide theme customisations
-!tide_theme.fish
-
-
+!tide-custom-autoconfigure.fish
