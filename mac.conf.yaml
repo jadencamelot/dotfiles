@@ -24,7 +24,11 @@
     #   2) stdout/stderr handling is broken in the plugin (behaviour inverted)
     - command: brew bundle install --file="~/.config/brew/Brewfile"
       stdout: false
-    - command: brew autoupdate start --upgrade
+    # No simple way to programmatically check whether brew autoupdate is already enabled.
+    # Running brew autoupdate start when it's already running throws a loud error, so || true
+    # will pretend it succeeded.
+    - command: brew autoupdate start --upgrade || true
+      stderr: false
     - command: mac/set_shell_fish.sh
     - command: mac/osx-config.sh
     # Yabai and skhd will fail loudly if you stop or restart the service when it's not running
@@ -33,4 +37,5 @@
     - command: yabai --start-service && yabai --restart-service
     - command: skhd --start-service && skhd --restart-service
     - command: fisher update              # Checks ~/.config/fish/fish_plugins and installs anything missing
+      stdout:  false
     - command: tide-custom-autoconfigure  # Apply my own custom tide autoconfiguration
