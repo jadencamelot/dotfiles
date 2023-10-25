@@ -32,3 +32,5 @@
     # any new config is applied.
     - command: yabai --start-service && yabai --restart-service
     - command: skhd --start-service && skhd --restart-service
+    - command: fisher update              # Checks ~/.config/fish/fish_plugins and installs anything missing
+    - command: tide-custom-autoconfigure  # Apply my own custom tide autoconfiguration
