@@ -1,0 +1,13 @@
+# Fish exclusions
+
+# Fish variables are
+fish/fish_variables
+
+# Exclude Tide fish plugin - should be managed by fisher
+fish/**/*tide*
+fish/fish_prompt.fish
+
+# Explicitly include personal tide theme customisations
+!tide_theme.fish
+
+
