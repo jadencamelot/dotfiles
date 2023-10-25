@@ -18,3 +18,9 @@
     path = ~/.config/git/.gitconfig-work
 [includeIf "gitdir:~/code/public/"]
     path = ~/.config/git/.gitconfig-anonymous
+[pull]
+	ff = only
+[fetch]
+	prune = true
+[diff]
+	colorMoved = zebra
