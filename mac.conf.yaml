@@ -27,5 +27,8 @@
     - command: brew autoupdate start --upgrade
     - command: mac/set_shell_fish.sh
     - command: mac/osx-config.sh
-    - command: yabai --stop-service && yabai --start-service
-    - command: skhd --stop-service && skhd --start-service
+    # Yabai and skhd will fail loudly if you stop or restart the service when it's not running
+    # However, --start-service is idempotent, so we can run that first, THEN restart to ensure
+    # any new config is applied.
+    - command: yabai --start-service && yabai --restart-service
+    - command: skhd --start-service && skhd --restart-service

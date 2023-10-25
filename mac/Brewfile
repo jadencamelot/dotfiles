@@ -12,8 +12,8 @@ brew "git"
 brew "gnupg"
 brew "iperf3"
 brew "jq"
-brew "koekeishiya/formulae/skhd", restart_service: true
-brew "koekeishiya/formulae/yabai", restart_service: true
+brew "koekeishiya/formulae/skhd"
+brew "koekeishiya/formulae/yabai"
 brew "nmap"
 brew "node"
 brew "p7zip"
