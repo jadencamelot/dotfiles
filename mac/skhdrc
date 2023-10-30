@@ -235,7 +235,7 @@ ctrl + shift - r : yabai --restart-service
 ctrl + shift - 0 : yabai -m space --balance
 
 # toggle floating
-ctrl + shift - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+ctrl + shift - t : yabai -m window --toggle float --grid 8:8:1:1:6:6
 
 # toggle sticky
 ctrl + shift - s : yabai -m window --toggle sticky
@@ -246,5 +246,3 @@ alt + shift - m    : yabai -m window --toggle zoom-fullscreen
 
 # switch vertical/horizontal split
 ctrl + shift - v : yabai -m window --toggle split
-
-
