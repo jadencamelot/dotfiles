@@ -63,7 +63,7 @@ yabai -m config mouse_action1                move
 yabai -m config mouse_action2                resize
 yabai -m config mouse_drop_action            swap
 
-# App Exclusions
+# App/Window Exclusions
 yabai -m rule --add app="^1Password$"           layer=above manage=off
 yabai -m rule --add app="^Activity Monitor$"    layer=above manage=off
 yabai -m rule --add app="^App Store$"           layer=above manage=off
@@ -73,10 +73,11 @@ yabai -m rule --add app="^Dictionary$"          layer=above manage=off
 yabai -m rule --add app="^Photo Booth$"         layer=above manage=off
 yabai -m rule --add app="^Software Update$"     layer=above manage=off
 yabai -m rule --add app="^System Preferences$"  layer=above manage=off
+yabai -m rule --add app="^System Settings$"     layer=above manage=off
 yabai -m rule --add app="^VLC$"                 layer=above manage=off
 yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac"  manage=off
 yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)"     manage=off
-yabai -m rule --add title="^SAML Login$"          layer=above manage=off
+yabai -m rule --add title="^.*SAML Login$"      layer=above manage=off
 
 # Auto-float non-resizeable windows (eg small dialog pop-ups)
 # Source: https://github.com/koekeishiya/yabai/issues/1317#issuecomment-1669185618
