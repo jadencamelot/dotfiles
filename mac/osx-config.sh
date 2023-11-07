@@ -63,8 +63,8 @@ defaults write com.apple.screencapture disable-shadow -bool true
 ### Keyboard
 
 # Fast key repeat/delay
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 6
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # Disable requiring Fn key for F1-12 keys
 # TODO
