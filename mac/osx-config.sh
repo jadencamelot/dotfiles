@@ -8,6 +8,14 @@
 #      Created:  20/05/2017        #
 ####################################
 
+##### SPECIFIC APPS #####
+
+### Hammerspoon
+
+# Non-default config file location
+# Reference: https://github.com/Hammerspoon/hammerspoon/issues/1734
+defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
+
 ##### OSX CONFIG #####
 
 ### General

@@ -14,7 +14,10 @@
     ~/.config/yabai/scripts: mac/yabai_scripts
     ~/.config/skhd/skhdrc: mac/skhdrc
     ~/.config/alacritty: mac/alacritty
-    # '~/Library/Application\ Support/Übersicht/widgets/simple-bar': mac/ubersicht/simple-bar
+
+    # Non-default location requires:
+    #   defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
+    ~/.config/hammerspoon: mac/hammerspoon
 
 - install-brew: true
 
