@@ -5,8 +5,7 @@ function git-prune-gone --description 'Delete all local git branches that were d
     echo
 
     # Fetch the list of branches
-    # set branch_list (git branch -vv | grep 'gone' | grep -v 'backup' | cut -d' ' -f3)
-    set branch_list (git branch -vv | cut -d' ' -f3 | grep -v '^\*')
+    set branch_list (git branch -vv | grep -v '^\*' | grep 'gone' | grep -v 'backup' | cut -d' ' -f3)
 
     # Preview branches to be deleted
     echo "Deleting the following branches:"
@@ -19,7 +18,7 @@ function git-prune-gone --description 'Delete all local git branches that were d
         # Actually delete
         set_color red
         echo
-        echo $branch_list | tr ' ' '\n' | xargs -I {} git branch '{}'
+        echo $branch_list | tr ' ' '\n' | xargs -I {} git branch -D '{}'
 
         set_color green
         echo
