@@ -23,7 +23,7 @@ function notify() {
         output+="
 ${message}"
     fi
-    
+
     echo ${group:+"-group $group"}
 
     # Notify using entire global buffer
@@ -36,6 +36,8 @@ ${message}"
 
 # yabai
 if brew outdated | grep -q 'yabai'; then
+	sleep 1
+
     output=''
     notify 'Yabai outdated - upgrading' 'yabai'
 
@@ -45,10 +47,14 @@ if brew outdated | grep -q 'yabai'; then
     yabai --stop-service
     output+=' done.'
 
+	sleep 3
+
     notify '⏳ Installing yabai...' 'yabai'
     brew upgrade yabai
     brew pin yabai
     output+=' done.'
+
+	sleep 3
 
     notify '♻️ Starting yabai...' 'yabai'
     yabai --start-service
@@ -63,6 +69,8 @@ fi
 
 # skhd
 if ! brew outdated | grep -q 'skhd'; then
+	sleep 1
+
     output=''
     notify 'skhd outdated - upgrading' 'skhd'
 
@@ -72,10 +80,14 @@ if ! brew outdated | grep -q 'skhd'; then
     skhd --stop-service
     output+=' done.'
 
+	sleep 3
+
     notify '⏳ Installing skhd...' 'skhd'
     brew upgrade skhd
     brew pin skhd
     output+=' done.'
+
+	sleep 3
 
     notify '✅ Starting skhd...' 'skhd'
     skhd --start-service
